@@ -6,35 +6,48 @@
 
 body {
     padding: 0px 0px;
+    margin-bottom: 62vh;
     /* width: 1394px;
     height: 1108px; */
     /* Greys/00 */
     background: rgb(233, 239, 239);
+    font-weight: 400;
 
 }
 
 .navbar {
     display: flex;
+    position: fixed;
+    z-index: 9999;
     flex-direction: row;
-    margin: auto;
+    margin: 0;
     padding-top: 0%;
     padding-bottom: 0%;
-    padding-left: 90px;
+    padding-left: 80px;
     padding-right: 29px;
     align-items: center;
     justify-content: space-between;
     width: 85%;
-    height: 53px;
-    /* Inside auto layout */
+    height: 60px;
     position: fixed;
     top: 0;
-    /* left: 0; */
-    /* z-index: 9999;  */
-    /* width: 100%; */
-    /* height: 50px; */
+    backdrop-filter: blur(0.9rem);
+    opacity: 11.8;
+    background: rgb(233, 239, 239, 0.70);
+
 }
 
-.pagehead img {
+.logo {
+    cursor: pointer;
+
+}
+
+.button-style {
+    border: 0;
+    background-color: rgba(233, 239, 239, 0);
+}
+
+.m {
     width: 80px;
     height: 80px;
     /* Inside auto layout */
@@ -43,17 +56,32 @@ body {
     box-shadow: 10px 9px 24px rgba(0, 0, 0, 0.1);
 }
 
+.top {
+    margin-top: 160px;
+    margin-left: 23px;
+}
+
+.x {
+    height: 280px;
+    width: auto;
+    margin-left: 61vh;
+    margin-top: 90px;
+}
+
 h1 {
     padding-top: 24px;
     font-family: 'Helvetica Neue';
-    font-weight: normal;
+    font-weight: 200;
+    display: inline-flex;
 }
 
 .frame {
-    width: 50%;
-    margin: 170px auto;
-    margin-bottom: 300px;
-    padding: 0;
+
+    width: 85%;
+    height: auto;
+    margin-top: 38vh;
+    /* margin-bottom: 62vh; */
+    padding-left: 90px;
 }
 
 .navbar a {
@@ -62,14 +90,6 @@ h1 {
     color: black;
     text-transform: capitalize;
     font-family: 'Helvetica Neue', sans-serif;
-}
-
-.logo {
-    font-weight: bold;
-    padding: 0px;
-    font-size: larger;
-    font-family: 'poppins', sans-serif;
-    flex-wrap: nowrap;
 }
 
 .navlinks {
@@ -82,84 +102,263 @@ h1 {
 }
 
 .bold {
-    font-weight: 500;
+    font-weight: 350;
+    font-family: 'Helvetica Neue';
+    margin-left: 7px;
+    padding-bottom: -3px;
+}
+
+.bold span {
+    position: relative;
+}
+
+.bold span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(233, 239, 239);
+    border-left: 2px solid rgb(85, 39, 39);
+    animation: typing 1.5s steps(10) forwards;
+}
+
+@keyframes typing {
+    100% {
+        left: 100%;
+        border-left: 0px;
+
+    }
 }
 
 .frame p {
     font-family: 'Helvetica Neue';
     margin-top: 6px;
     font-size: medium;
+    font-weight: 400;
 }
 
 .pagehead {
-    margin-bottom: 250px;
+    margin-bottom: 50vh;
+    height: 100%;
+    display: inline-flex;
 }
 
-.aboutsection {
-    margin-top: 390px;
+.aboutsection{
+    margin-bottom: 0;
+    height: 100%;
+    margin-left: 23px;
 }
 
-.aboutsection h1 {
-    font-weight: 500;
+.projectssection{
+    margin-top: 5vh;
+    margin-bottom: 50vh;
+    margin-left: 23px;
+}
+.aboutsection h1{
+    font-weight: 100;
+    padding-top: 40vh;
 }
 
-@media (max-width: 607px) {
+.projectssection h1{
+    font-weight: 100;
+    padding-top: 40vh;
+    padding-bottom: 10px;
+}
+
+
+.aboutsection p{
+    text-align: left;
+    margin-right: 38%; 
+    margin-bottom: 50vh;
+}
+.projectssection a{
+   text-decoration: none;
+}
+
+@media (max-width: 390px) {
+    * {
+        max-width: 390px;
+    }
+
+    body {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 12px;
+        min-width: none;
+        max-width: none;
+
+    }
+
     .navlinks {
         display: none;
     }
 
     .navbar {
         display: flex;
-        margin: auto;
-        padding: 0;
+        height: 10%;
+        width: 100%;
         justify-content: center;
-        position: absolute;
-        top: 0%;
-        right: 0%;
-        left: 0%;
+        align-items: center;
+        margin: 0%;
+        padding: 0%;
+        position: fixed;
+        box-sizing: border-box;
+        min-width: 0;
+        max-width: 390px;
     }
+
     .logo {
-        padding: auto;
-        font-size: 27px;
-        font-weight: 500;
+        display: flex;
+    }
+
+    .container {
+        display: flex;
+        /*border:1px solid red; */
+        height: 100%;
         align-items: center;
     }
 
-    .frame {
-        margin-top: 290px;
-        margin-left: 20px;
-        margin-right: 12px;
-        margin-bottom: 350px;
-        width: auto;
-    }
-
-    .img {
+    .svg {
         display: flex;
-        justify-content: left;
-        /* border: 2px solid; */
-        height: 95px;
-    }
-
-    .img img {
-        height: auto;
+        font: 12.5em 'Montserrat';
         width: auto;
+        height: auto;
+        margin: 0;
     }
 
-    .pagehead a {
-        text-decoration: none;
+    .frame {
+        width: 100%;
+        height: auto;
+        max-width: fit-content;
+        margin: 0;
+        padding: 0;
     }
 
-    .pagehead p {
-        padding-left: 9px;
+    .pagehead {
+        width: 90%;
+        height: auto;
+        margin-right: 10%;
+        font-weight: 100;
+        margin-top: 50%;
+    }
+    .top{
+        margin-top: 30%;
+    }
+    .desgin{
+        margin-bottom: 1px;
     }
 
-    .design {
-        /* border: 2px solid; */
-        padding-left: 9px;
+    .txt p{
+        margin-right: 30%;
+        margin-top: 0;
+        padding-top: 6px;
+        font-weight: 300;
+    }
+    .txt{
+        padding-left: 2%;
+    }
+    .vector-img {
+        display: none;
+    }
+    .aboutsection p{
+        font-size: 15px;
+        margin-right: 14px;
+    }
+}
+@media (max-width: 414px){
+    * {
+        max-width: 414px;
     }
 
-    .aboutsection {
-        margin-top: 200px;
-        padding-top: 300px;
+    body {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 12px;
+        min-width: none;
+        max-width: none;
+
+    }
+
+    .navlinks {
+        display: none;
+    }
+
+    .navbar {
+        display: flex;
+        height: 10%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin: 0%;
+        padding: 0%;
+        position: fixed;
+        box-sizing: border-box;
+        min-width: 0;
+        max-width: 414px;
+    }
+
+    .logo {
+        display: flex;
+    }
+
+    .container {
+        display: flex;
+        /*border:1px solid red; */
+        height: 100%;
+        align-items: center;
+    }
+
+    .svg {
+        display: flex;
+        font: 12.5em 'Montserrat';
+        width: auto;
+        height: auto;
+        margin: 0;
+    }
+
+    .frame {
+        width: 100%;
+        height: auto;
+        max-width: fit-content;
+        margin: 0;
+        padding: 0;
+    }
+
+    .pagehead {
+        width: 90%;
+        height: auto;
+        margin-right: 10%;
+        font-weight: 100;
+        margin-top: 50%;
+    }
+    .top{
+        margin-top: 30%;
+    }
+    .desgin{
+        margin-bottom: 1px;
+    }
+
+    .txt p{
+        margin-right: 30%;
+        margin-top: 0;
+        padding-top: 6px;
+        font-weight: 300;
+    }
+    .txt{
+        padding-left: 2%;
+    }
+    .vector-img {
+        display: none;
+    }
+    .aboutsection p{
+        font-size: 15px;
+        margin-right: 14px;
     }
 }
