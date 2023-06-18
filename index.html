@@ -7,35 +7,140 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meet Balani</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="navbar">
-        <div class="logo">
-            <a href="">Meet Balani</a>
+
+        <div class="logo" id="refreshButton"> <button class="button-style" onclick="window.location.reload();">
+                <svg viewBox="0 0 1300 300">
+                    <symbol id="s-text">
+                        <text text-anchor="middle" x="50%" y="80%">Meet Balani</text>
+                    </symbol>
+                    <g class="g-ants">
+                        <use xlink:href="#s-text" class="text-copy"></use>
+                        <use xlink:href="#s-text" class="text-copy"></use>
+                        <use xlink:href="#s-text" class="text-copy"></use>
+                        <use xlink:href="#s-text" class="text-copy"></use>
+                        <use xlink:href="#s-text" class="text-copy"></use>
+                    </g>
+                </svg>
+                <style>
+                    @import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+                    html,
+                    body {
+                        height: auto;
+                        font-weight: 800;
+                        margin: 0;
+                        padding: 0;
+                        background: rgb(233, 239, 239);
+                        font-family: playfair display;
+                    }
+
+                    .container {
+                        display: flex;
+                        /*border:1px solid red; */
+                        height: 100%;
+                        align-items: center;
+                    }
+
+                    svg {
+                        display: flex;
+                        font: 12.5em 'Montserrat';
+                        width: 192px;
+                        height: 60px;
+                        margin: 0 auto;
+                        background: rgba(233, 239, 239, 0);
+                    }
+
+                    .text-copy {
+                        fill: none;
+                        stroke: black;
+                        stroke-dasharray: 6% 29%;
+                        stroke-width: 5.9px;
+                        stroke-dashoffset: 0%;
+                        animation: stroke-offset 5.5s infinite linear;
+                    }
+
+                    .text-copy:nth-child(1) {
+                        stroke: black;
+                        animation-delay: -5s;
+                    }
+
+                    .text-copy:nth-child(2) {
+                        stroke: black;
+                        animation-delay: -4s;
+                    }
+
+                    .text-copy:nth-child(3) {
+                        stroke: black;
+                        animation-delay: -3s;
+                    }
+
+                    .text-copy:nth-child(4) {
+                        stroke: black;
+                        animation-delay: -2s;
+                    }
+
+                    .text-copy:nth-child(5) {
+                        stroke: black;
+                        animation-delay: -4s;
+                    }
+
+                    @keyframes stroke-offset {
+                        100% {
+                            stroke-dashoffset: -35%;
+                        }
+                    }
+                </style>
+            </button>
         </div>
+
         <div class="navlinks">
             <a href="#about">about</a>
-            <a href="">Projects</a>
+            <a href="#project">Projects</a>
             <a href="">Contact</a>
+            <a href="shrudge_resume-3.pdf">Resumé</a>
         </div>
     </div>
     <div class="frame">
         <div class="pagehead">
-            <div class="img">
-                <img class="m" src="IMG_4162 2.jpg" alt="">
+            <div class="top">
+                <div class="img">
+                    <img class="m" src="IMG_4162 2.jpg" alt="">
+                </div>
+                <div class="txt">
+                    <div class="design">
+                        <h1>I Design <div class="bold"><span>Websites</span></div>
+                        </h1>
+                    </div>
+                    <p>Hello there, I am Meet Balani. Scroll to know more!</p>
+                </div>
             </div>
-            <div class="design">
-                <h1>I Design <span class="bold">Websites</span></h1>
+            <div class="vector-img">
+                <img class="x" src="icon-png-transparent-13.jpg.png" alt="">
             </div>
-            <p>Hello there, I am Meet Balani. Scroll to know more!</p>
         </div>
         <div class="aboutsection">
             <h1 id="about">About</h1>
-            <p>A little bit about me, I am Meet Balani (shrudge). I am a web designer and tech blogger at theteatech, and currently a student pursuing Computer Engineering at M.S. University, Vododara. Likes to make Minimal and design focused websites.</p>
+            <p>A little bit about me, I am Meet Balani (shrudge). I am a web designer and tech blogger at theteatech,
+                and currently a student pursuing Computer Engineering at M.S. University, Vododara. I am fond of tech,
+                software, hardware, design and I like to make Minimal and Design focused Projects.
+                check out some of my projects, you can know me more from my resume and feel free to reach me out on my
+                socials.
+            </p>
+        </div>
+        <div class="projectssection">
+            <h1 id="project">Projects</h1>
+            <ul>
+                <p>• <a href="https://pypi.org/project/ISCV/">ISCV<a> - Python Module<p>
+                <p>• <a href="https://hostels.msubaroda.ac.in">MSUIS<a></a> - Hostel Managment Website, MSU<p>
+            </ul>
         </div>
     </div>
 </body>
