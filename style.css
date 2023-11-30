@@ -283,7 +283,9 @@ h1 {
     margin-bottom: 50vh;
     margin-left: 25px;
 }
-
+.projectssection a{
+    text-decoration: none;
+}
 .projectssection h1 {
     font-weight: 100;
     padding-top: 40vh;
