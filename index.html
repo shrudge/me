@@ -11,11 +11,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7419f37fbc.js" crossorigin="anonymous"></script>
+
+
+
+    <script src="script.js"></script>
+    <style>
+
+    </style>
 </head>
 
 <body>
     <div class="navbar">
-
+        <div class="menu-toggle">
+            <svg class="ham hamRotate180 ham5" viewBox="0 0 100 100" width="80" onclick="toggleMenu()">
+                <path class="line top"
+                    d="m 30,33 h 40 c 0,0 8.5,-0.68551 8.5,10.375 0,8.292653 -6.122707,9.002293 -8.5,6.625 l -11.071429,-11.071429" />
+                <path class="line middle" d="m 70,50 h -40" />
+                <path class="line bottom"
+                    d="m 30,67 h 40 c 0,0 8.5,0.68551 8.5,-10.375 0,-8.292653 -6.122707,-9.002293 -8.5,-6.625 l -11.071429,11.071429" />
+            </svg>
+        </div>
         <div class="logo" id="refreshButton"> <button class="button-style" onclick="window.location.reload();">
                 <svg viewBox="0 0 1300 300">
                     <symbol id="s-text">
@@ -54,7 +70,8 @@
                         font: 12.5em 'Montserrat';
                         width: 192px;
                         height: 60px;
-                        margin: 0 auto;
+                        margin: 0;
+                        padding: 0;
                         background: rgba(233, 239, 239, 0);
                     }
 
@@ -100,14 +117,52 @@
                 </style>
             </button>
         </div>
-
         <div class="navlinks">
             <a href="#about">about</a>
             <a href="#project">Projects</a>
-            <a href="">Contact</a>
-            <a href="shrudge_resume-3.pdf">Resumé</a>
+            <a href="#" class="contact-button" onclick="toggleContact()">Contact</a>
+            <a href="resume.pdf">Resumé</a>
         </div>
     </div>
+
+    <div class="menu">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#project">Projects</a></li>
+            <li><a href="#" class="contact-button" onclick="toggleContact()">Contact</a></li>
+            <li><a href="resume.pdf">Resumé</a></li>
+        </ul>
+    </div>
+    <div id="contactOverlay">
+        <div id="contactContent">
+            <!-- Your contact form or content goes here -->
+            <div class="socials"> <a href="https://in.linkedin.com/in/meet-balani" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i></a> </div>
+            <div class="socials"> <a href="https://github.com/shrudge" target="_blank">
+                    <i class="fa-brands fa-github"></i></a> </div>
+            <div class="socials"> <a href="https://twitter.com/shrudge" target="_blank">
+                    <i class="fa-brands fa-x-twitter"></i></a> </div>
+            <div class="socials"> <a href="https://instagram.com/shrudge" target="_blank">
+                    <i class="fa-brands fa-instagram"></i></a> </div>
+            <div class="socials"> <a href="mailto:meetbalani23@icloud.com" target="_blank"><i
+                        class="fa-solid fa-square-envelope"></i></a> </div>
+            <div class="socials"> <a href="tel:+919265172150" target="_blank"> <i class="fa-solid fa-phone"
+                        style="color: #ff9300;"></i></a></div>
+            <div><button id="closeContact" onclick="closeContact()"><i class="fa-solid fa-arrow-left"></i></button>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        function toggleContact() {
+            document.getElementById('contactOverlay').classList.toggle('show');
+            document.getElementById('contactContent').classList.toggle('show');
+        }
+        function closeContact() {
+            document.getElementById('contactOverlay').classList.remove('show');
+            document.getElementById('contactContent').classList.remove('show');
+        }
+    </script>
     <div class="frame">
         <div class="pagehead">
             <div class="top">
@@ -119,7 +174,8 @@
                         <h1>I Design <div class="bold"><span>Websites</span></div>
                         </h1>
                     </div>
-                    <p>Hello there, I am Meet Balani. Scroll to know more!</p>
+                    <p>Hello there, I am Meet Balani. </p>
+                    <p>Scroll to know more!</p>
                 </div>
             </div>
             <div class="vector-img">
@@ -139,7 +195,8 @@
             <h1 id="project">Projects</h1>
             <ul>
                 <p>• <a href="https://pypi.org/project/ISCV/">ISCV<a> - Python Module<p>
-                <p>• <a href="https://hostels.msubaroda.ac.in">MSUIS<a></a> - Hostel Managment Website, MSU<p>
+                                <p>• <a href="https://hostels.msubaroda.ac.in">MSUIS<a></a> - Hostel Managment Website,
+                                        MSU<p>
             </ul>
         </div>
     </div>
