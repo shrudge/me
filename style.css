@@ -88,15 +88,15 @@ body {
 
 #closeContact {
 
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     font-size: large;
     /* Inside auto layout */
     flex: none;
     border-radius: 100px;
     background: rgba(202, 207, 180, 0.4);
     box-shadow: 10px 9px 24px rgba(0, 0, 0, 0.5);
-    opacity: 0.6;
+    opacity: 0.9;
     text-decoration: none;
     border: 0px solid;
 
